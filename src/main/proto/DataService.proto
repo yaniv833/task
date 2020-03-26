@@ -1,0 +1,20 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.yaniv.grpc;
+
+message DataFetchRequest{}
+
+message DataResponse {
+    string name = 1;
+    string type = 2;
+    Version versions = 3;
+}
+
+message Version {
+    string name = 1;
+    int32 size_bytes = 2;
+}
+
+service DataService {
+    rpc fetch(DataFetchRequest) returns (stream DataResponse);
+}

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: example:my-grpc-interface:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/example/my-grpc-interface/unknown/my-grpc-interface-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/example/my-grpc-interface/unknown/my-grpc-interface-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/example/my-grpc-interface/unknown/my-grpc-interface-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
