@@ -4,7 +4,7 @@ package com.yaniv.grpc;
 
 message DataFetchRequest{}
 
-message DataResponse {
+message Entity {
     string name = 1;
     string type = 2;
     Version versions = 3;
@@ -16,5 +16,5 @@ message Version {
 }
 
 service DataService {
-    rpc fetch(DataFetchRequest) returns (stream DataResponse);
+    rpc fetch(DataFetchRequest) returns (stream Entity);
 }

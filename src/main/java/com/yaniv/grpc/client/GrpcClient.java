@@ -1,8 +1,8 @@
 package com.yaniv.grpc.client;
 
 import com.yaniv.grpc.DataFetchRequest;
-import com.yaniv.grpc.DataResponse;
 import com.yaniv.grpc.DataServiceGrpc;
+import com.yaniv.grpc.Entity;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
@@ -17,11 +17,10 @@ public class GrpcClient {
         DataServiceGrpc.DataServiceBlockingStub stub
                 = DataServiceGrpc.newBlockingStub(channel);
 
-        Iterator<DataResponse> entities = stub.fetch(DataFetchRequest.newBuilder().build());
+        Iterator<Entity> entities = stub.fetch(DataFetchRequest.newBuilder().build());
 
         System.out.println("Response received from server:\n");
-
-        while(entities.hasNext()){
+        while (entities.hasNext()) {
             System.out.println(entities.next().toString());
         }
 
